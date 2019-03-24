@@ -38,4 +38,13 @@ class Number
     {
         return $this->number % self::FIZZ_NUMBER === 0;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        // todo: 実装
+        return (string)$this->number;
+    }
 }

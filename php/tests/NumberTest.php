@@ -64,4 +64,37 @@ class NumberTest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @test __toString
+     * @dataProvider toStringDataProvider
+     */
+    public function toStringTest($expected, $number)
+    {
+        $targetNumber = new Number($number);
+        $this->assertSame($expected, (string)$targetNumber);
+    }
+
+    /**
+     * dataProvider
+     *
+     * @return array
+     */
+    public function toStringDataProvider()
+    {
+        return [
+            '(int)1のとき、(string)1が出力されること' => [
+                '1',
+                1
+            ],
+            '(int)3のとき、(string)Fizzが出力されること' => [
+                'Fizz',
+                3
+            ],
+            '(int)5のとき、(string)Buzzが出力されること' => [
+                'Buzz',
+                5
+            ],
+        ];
+    }
 }
