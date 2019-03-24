@@ -11,6 +11,9 @@ class Number
     /** @var int */
     private $number;
 
+    const FIZZ_NUMBER = 3;
+    const BUZZ_NUMBER = 5;
+
     /**
      * Number constructor.
      * @param int $number
@@ -23,16 +26,16 @@ class Number
     /**
      * @return bool
      */
-    public function isFizz()
+    public function isFizz(): bool
     {
-        return true;
+        return $this->number % self::FIZZ_NUMBER === 0;
     }
 
     /**
      * @return bool
      */
-    public function isBuzz()
+    public function isBuzz(): bool
     {
-        return true;
+        return $this->number % self::FIZZ_NUMBER === 0;
     }
 }
