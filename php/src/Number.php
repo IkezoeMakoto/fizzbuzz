@@ -44,7 +44,16 @@ class Number
      */
     public function __toString(): string
     {
-        // todo: 実装
+        if ($this->isFizz() && $this->isBuzz()) {
+            return 'FizzBuzz';
+        }
+        if ($this->isFizz()) {
+            return 'Fizz';
+        }
+        if ($this->isBuzz()) {
+            return 'Buzz';
+        }
+
         return (string)$this->number;
     }
 }
