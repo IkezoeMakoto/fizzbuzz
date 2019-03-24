@@ -36,7 +36,7 @@ class Number
      */
     public function isBuzz(): bool
     {
-        return $this->number % self::FIZZ_NUMBER === 0;
+        return $this->number % self::BUZZ_NUMBER === 0;
     }
 
     /**
