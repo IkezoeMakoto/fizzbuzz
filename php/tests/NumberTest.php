@@ -60,7 +60,7 @@ class NumberTest extends TestCase
             ],
             '5の倍数のとき、trueをかえすこと' => [
                 true,
-                3
+                5
             ],
         ];
     }
